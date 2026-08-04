@@ -37,9 +37,6 @@ export function Pricing() {
     <section id="pricing" className="border-b border-neutral-200 bg-white">
       <div className="mx-auto max-w-container px-[6vw] py-16 lg:py-24">
         <div className="mb-12 text-center">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-rose">
-            Pricing
-          </p>
           <h2 className="font-display text-[clamp(2rem,5vw,3.375rem)] font-medium leading-tight text-green-850">
             Simple, transparent pricing
           </h2>

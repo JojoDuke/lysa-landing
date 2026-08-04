@@ -18,7 +18,7 @@ export function StatsSection() {
               key={stat.label}
               className="rounded-2xl border border-neutral-200 bg-[#f0fdf9] p-8 text-center"
             >
-              <p className="font-display text-5xl font-medium text-rose lg:text-6xl">
+              <p className="font-display text-5xl font-medium text-green-400 lg:text-6xl">
                 {stat.value}
               </p>
               <p className="mt-4 text-sm leading-relaxed text-body">
