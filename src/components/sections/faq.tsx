@@ -9,19 +9,14 @@ import {
 
 const faqs = [
   {
-    question: "Is Lysa a chatbot?",
-    answer:
-      "No. Lysa is positioned as an AI employee, a deployable software product that is configured for your brokerage and continuously maintained. It's not a DIY chatbot builder or a one-off custom project.",
-  },
-  {
     question: "How long does deployment take?",
     answer:
-      "Most agencies go live within 1-2 weeks. This includes WhatsApp setup, knowledge base configuration, listing integration, testing, and your go-live review.",
+      "Most agencies go live within 7 days. This includes WhatsApp setup, knowledge base configuration, listing integration, testing, and your go-live review.",
   },
   {
     question: "What platforms does Lysa support?",
     answer:
-      "WhatsApp is the primary channel today. Future channels include Instagram, Facebook Messenger, SMS, and email.",
+      "WhatsApp is the primary channel today. Lysa can also be extended to Instagram, Facebook Messenger, SMS, and email if you want.",
   },
   {
     question: "Do we need technical knowledge?",

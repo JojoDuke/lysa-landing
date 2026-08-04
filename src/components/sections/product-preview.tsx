@@ -122,7 +122,7 @@ function ChatPreview() {
   }, [visibleMessages, typing]);
 
   return (
-    <div className="flex h-[420px] flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white">
+    <div className="flex h-[340px] flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white sm:h-[380px] lg:h-[420px]">
       <div className="flex shrink-0 items-center gap-3 border-b border-neutral-200 bg-[#f8f8f8] px-4 py-3">
         <div className="flex h-9 w-9 items-center justify-center rounded-full bg-green-400/10">
           <span className="text-sm font-bold text-green-400">L</span>
@@ -178,7 +178,7 @@ function ChatPreview() {
 export function ProductPreview() {
   return (
     <section id="demo" className="border-b border-neutral-200 bg-surface">
-      <div className="mx-auto max-w-container px-[6vw] py-16 lg:py-20">
+      <div className="mx-auto max-w-container px-[6vw] py-10 sm:py-16 lg:py-20">
         <div className="overflow-hidden rounded-[1.25rem] border border-neutral-200 bg-white shadow-sm">
           <div className="flex items-center gap-2 border-b border-neutral-200 px-4 py-3">
             <div className="flex gap-1.5">
@@ -192,11 +192,11 @@ export function ProductPreview() {
           </div>
 
           <div className="grid gap-0 lg:grid-cols-2">
-            <div className="relative min-h-[280px] overflow-hidden bg-gradient-to-br from-[#d1fae5] via-[#a7f3d0] to-[#6ee7b7] p-8 lg:min-h-[420px]">
+            <div className="relative order-2 overflow-hidden bg-gradient-to-br from-[#d1fae5] via-[#a7f3d0] to-[#6ee7b7] p-5 sm:p-8 lg:order-1 lg:min-h-[420px]">
               <div className="absolute inset-0 opacity-30 rucoria-dots" />
 
-              <div className="relative flex h-full flex-col justify-between">
-                <div className="space-y-3">
+              <div className="relative flex h-full flex-col justify-between gap-6 lg:gap-8">
+                <div className="hidden space-y-3 sm:block">
                   <div className="w-fit rounded-xl border border-white/60 bg-white/80 px-4 py-3 shadow-sm backdrop-blur-sm">
                     <div className="flex items-center gap-2 text-green-850">
                       <MessageCircle className="h-4 w-4 text-green-600" />
@@ -221,7 +221,7 @@ export function ProductPreview() {
                 </div>
 
                 <div>
-                  <p className="font-display text-2xl font-medium text-green-850">
+                  <p className="font-display text-xl font-medium text-green-850 sm:text-2xl">
                     Every conversation, handled.
                   </p>
                   <p className="mt-2 max-w-sm text-sm text-body">
@@ -230,14 +230,14 @@ export function ProductPreview() {
                 </div>
               </div>
             </div>
-            <div className="border-t border-neutral-200 p-6 lg:border-l lg:border-t-0 lg:p-8">
+            <div className="order-1 border-b border-neutral-200 p-4 sm:p-6 lg:order-2 lg:border-b-0 lg:border-l lg:border-t-0 lg:p-8">
               <ChatPreview />
             </div>
           </div>
         </div>
 
         <div
-          className="mt-0 h-24 border-x border-b border-neutral-200 bg-[repeating-linear-gradient(135deg,#f1efef_0,#f1efef_1px,transparent_1px,transparent_12px)]"
+          className="mt-0 h-10 border-x border-b border-neutral-200 bg-[repeating-linear-gradient(135deg,#f1efef_0,#f1efef_1px,transparent_1px,transparent_12px)] sm:h-16 lg:h-24"
           aria-hidden
         />
       </div>

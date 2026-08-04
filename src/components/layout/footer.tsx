@@ -24,11 +24,11 @@ const footerLinks = {
     { href: "#platform", label: "Platform Overview" },
     { href: "#pricing", label: "Pricing" },
     { href: "#faq", label: "FAQ" },
+    { href: "/blog", label: "Blog" },
   ],
   Company: [
     { href: BOOK_DEMO_URL, label: "Book a Demo", external: true },
     { href: "#platform", label: "About" },
-    { href: "#faq", label: "Reviews" },
   ],
 };
 

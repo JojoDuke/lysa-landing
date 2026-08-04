@@ -49,9 +49,9 @@ export function Pricing() {
           </p>
         </div>
 
-        <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
+        <div className="mx-auto grid max-w-4xl items-stretch gap-6 md:grid-cols-2">
           {plans.map((plan) => (
-            <Card key={plan.name}>
+            <Card key={plan.name} className="flex h-full flex-col">
               <CardHeader>
                 <CardTitle className="font-display text-green-850">
                   {plan.name}
@@ -63,7 +63,7 @@ export function Pricing() {
                   <span className="ml-1 text-body">{plan.period}</span>
                 </div>
               </CardHeader>
-              <CardContent>
+              <CardContent className="flex flex-1 flex-col">
                 <ul className="space-y-3">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3">
@@ -72,11 +72,13 @@ export function Pricing() {
                     </li>
                   ))}
                 </ul>
-                <Button asChild className="mt-8 w-full">
-                  <Link href={BOOK_DEMO_URL} target="_blank" rel="noopener noreferrer">
-                    Book a Demo
-                  </Link>
-                </Button>
+                <div className="mt-auto pt-8">
+                  <Button asChild className="w-full">
+                    <Link href={BOOK_DEMO_URL} target="_blank" rel="noopener noreferrer">
+                      Book a Demo
+                    </Link>
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           ))}

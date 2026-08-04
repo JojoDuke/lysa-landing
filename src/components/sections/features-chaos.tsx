@@ -24,10 +24,10 @@ export function FeaturesChaos() {
 
         <div className="relative text-center">
           <h2 className="font-display text-[clamp(2rem,5vw,3.375rem)] font-medium leading-tight text-green-850">
-            Too many moving parts?
+            Buyer and seller chats never stop.
           </h2>
           <h2 className="mt-2 font-display text-[clamp(2rem,5vw,3.375rem)] font-medium leading-tight text-green-850">
-            Bring things under control.
+            Neither does Lysa.
           </h2>
         </div>
 

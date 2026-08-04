@@ -1,9 +1,13 @@
+"use client";
+
 import {
   Calendar,
   MessageSquare,
   FileText,
   ClipboardList,
 } from "lucide-react";
+import { motion } from "framer-motion";
+import { fadeInUp, staggerContainer } from "@/lib/motion";
 
 const workflowItems = [
   {
@@ -32,43 +36,89 @@ const workflowItems = [
   },
 ];
 
+function WorkflowCard({
+  item,
+}: {
+  item: (typeof workflowItems)[number];
+}) {
+  return (
+    <>
+      <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-lg border border-neutral-200 bg-white">
+        <item.icon className="h-4 w-4 text-green-850" />
+      </div>
+      <p className="text-sm font-semibold text-green-850">{item.label}</p>
+      <p className="mt-1 text-xs text-body">{item.detail}</p>
+    </>
+  );
+}
+
 export function PlatformIntro() {
   return (
-    <section id="platform" className="bg-green-800 pb-0 pt-16 lg:pt-24">
-      <div className="mx-auto max-w-container px-[6vw]">
-        <div className="overflow-hidden rounded-t-[2rem] bg-white px-6 py-16 text-center lg:rounded-t-[3rem] lg:px-16 lg:py-20">
-          <h2 className="font-display text-[clamp(2rem,5vw,3.375rem)] font-medium leading-tight text-green-850">
-            Designed with you in mind.
-          </h2>
-          <p className="mx-auto mt-4 max-w-xl text-lg text-body">
+    <section id="platform" className="bg-green-800 pb-0 pt-12 sm:pt-16 lg:pt-24">
+      <div className="mx-auto max-w-container px-0 sm:px-[4vw] lg:px-[6vw]">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-80px" }}
+          variants={staggerContainer}
+          className="overflow-hidden rounded-t-[1.5rem] bg-white px-5 py-12 text-center sm:rounded-t-[2rem] sm:px-8 sm:py-16 lg:rounded-t-[3rem] lg:px-16 lg:py-20"
+        >
+          <motion.h2
+            variants={fadeInUp}
+            className="font-display text-[clamp(1.75rem,6vw,3.375rem)] font-medium leading-tight text-green-850"
+          >
+            From first message to booked showing.
+          </motion.h2>
+          <motion.p
+            variants={fadeInUp}
+            className="mx-auto mt-4 max-w-xl text-base text-body sm:text-lg"
+          >
             You sell homes. We handle the conversations.
-          </p>
+          </motion.p>
 
-          <div className="relative mx-auto mt-16 max-w-4xl">
+          {/* Mobile: stacked 2-col grid */}
+          <motion.div
+            variants={fadeInUp}
+            className="mt-10 grid grid-cols-2 gap-3 text-left md:hidden"
+          >
+            {workflowItems.map((item) => (
+              <div
+                key={item.label}
+                className="rounded-xl border border-neutral-200 bg-[#f0fdf9] p-3 shadow-sm sm:p-4"
+              >
+                <WorkflowCard item={item} />
+              </div>
+            ))}
+          </motion.div>
+
+          {/* Desktop: absolute scatter layout */}
+          <motion.div
+            variants={fadeInUp}
+            className="relative mx-auto mt-16 hidden max-w-4xl md:block"
+          >
             <div className="absolute left-[10%] right-[10%] top-1/2 h-px -translate-y-1/2 bg-neutral-200" />
 
             <div className="relative min-h-[320px]">
-              {workflowItems.map((item) => (
-                <div
+              {workflowItems.map((item, i) => (
+                <motion.div
                   key={item.label}
+                  variants={fadeInUp}
+                  custom={i}
                   className={`absolute ${item.position} w-44 rounded-xl border border-neutral-200 bg-[#f0fdf9] p-4 text-left shadow-sm`}
                 >
-                  <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-lg bg-white border border-neutral-200">
-                    <item.icon className="h-4 w-4 text-green-850" />
-                  </div>
-                  <p className="text-sm font-semibold text-green-850">
-                    {item.label}
-                  </p>
-                  <p className="mt-1 text-xs text-body">{item.detail}</p>
-                </div>
+                  <WorkflowCard item={item} />
+                </motion.div>
               ))}
 
-              <div className="absolute left-1/2 top-1/2 flex h-4 w-4 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-rose">
+              <motion.div
+                variants={fadeInUp}
+                className="absolute left-1/2 top-1/2 flex h-4 w-4 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-rose"
+              >
                 <div className="h-2 w-2 rounded-full bg-white" />
-              </div>
+              </motion.div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

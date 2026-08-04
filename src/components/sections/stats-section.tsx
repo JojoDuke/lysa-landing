@@ -1,7 +1,7 @@
 const stats = [
   { value: "24/7", label: "AI availability for every lead" },
   { value: "100%", label: "of inquiries get an instant response" },
-  { value: "1-2", label: "weeks average deployment time" },
+  { value: "7", label: "day deployment time" },
 ];
 
 export function StatsSection() {
