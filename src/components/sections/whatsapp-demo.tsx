@@ -21,7 +21,7 @@ const demoScenarios: Record<string, { userMessage: string; lysaResponse: string 
   search: {
     userMessage: "Show me 3-bedroom homes in Scottsdale under $700k",
     lysaResponse:
-      "I found 3 properties matching your criteria:\n\n🏠 1420 Desert View Dr — $685,000\n🏠 892 Camelback Ln — $695,000\n🏠 1560 Scottsdale Rd — $670,000\n\nWould you like photos or to book a showing?",
+      "I found 3 properties matching your criteria:\n\n🏠 1420 Desert View Dr, $685,000\n🏠 892 Camelback Ln, $695,000\n🏠 1560 Scottsdale Rd, $670,000\n\nWould you like photos or to book a showing?",
   },
   book: {
     userMessage: "Can I book a showing for Saturday?",
@@ -97,7 +97,7 @@ export function WhatsAppDemo() {
         <SectionHeader
           label="Interactive Demo"
           title="See Lysa in action"
-          description="Experience how Lysa handles real conversations — qualify leads, search properties, and book showings instantly."
+          description="Experience how Lysa handles real conversations: qualify leads, search properties, and book showings instantly."
         />
 
         <div className="mx-auto max-w-lg">

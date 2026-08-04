@@ -1,47 +1,36 @@
-"use client";
-
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
+import { BOOK_DEMO_URL } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
-import { Glow } from "@/components/ui/glow";
 
 export function FinalCTA() {
   return (
-    <section id="cta" className="relative py-24 lg:py-32 overflow-hidden">
-      <Glow className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] w-[600px]" />
-
-      <div className="relative mx-auto max-w-4xl px-6 lg:px-8 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl">
-            Ready to hire your{" "}
-            <span className="bg-gradient-to-r from-emerald-400 to-emerald-200 bg-clip-text text-transparent">
-              AI employee?
-            </span>
+    <section id="cta" className="bg-surface pb-0 pt-16 lg:pt-24">
+      <div className="mx-auto max-w-container px-[6vw]">
+        <div className="overflow-hidden rounded-t-[2rem] border border-b-0 border-neutral-200 bg-white px-6 py-16 text-center lg:rounded-t-[3rem] lg:px-16 lg:py-20">
+          <h2 className="font-display text-[clamp(2rem,5vw,3.375rem)] font-medium leading-tight text-green-850">
+            Make every lead your{" "}
+            <span className="text-green-400">best lead.</span>
           </h2>
-          <p className="mt-6 text-lg text-white/50 max-w-2xl mx-auto">
-            Join brokerages across America that never miss a lead. Book a demo and see Lysa
-            qualify leads, recommend properties, and book showings — live.
+          <p className="mx-auto mt-6 max-w-xl text-lg text-body">
+            Improve lead response, conversion, and customer satisfaction with
+            Lysa on WhatsApp.
           </p>
 
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="mt-10">
             <Button asChild size="lg">
-              <Link href="mailto:hello@lysa.ai?subject=Book%20a%20Demo">
-                Book a Demo
-                <ArrowRight className="h-4 w-4" />
+              <Link href={BOOK_DEMO_URL} target="_blank" rel="noopener noreferrer">
+                Book a demo
+                <ChevronRight className="h-4 w-4" />
               </Link>
             </Button>
           </div>
 
-          <p className="mt-6 text-sm text-white/30">
-            No commitment required. See Lysa in action with your brokerage&apos;s use case.
+          <p className="mt-6 text-sm text-body/70">
+            No commitment required. See Lysa in action with your brokerage&apos;s
+            use case.
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

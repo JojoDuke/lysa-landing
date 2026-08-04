@@ -1,71 +1,83 @@
 "use client";
 
-import { SectionHeader } from "@/components/ui/section-header";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { MotionSection } from "@/lib/motion";
 
 const faqs = [
   {
     question: "Is Lysa a chatbot?",
     answer:
-      "No. Lysa is positioned as an AI employee — a deployable software product that is configured for your brokerage and continuously maintained. It's not a DIY chatbot builder or a one-off custom project.",
+      "No. Lysa is positioned as an AI employee, a deployable software product that is configured for your brokerage and continuously maintained. It's not a DIY chatbot builder or a one-off custom project.",
   },
   {
     question: "How long does deployment take?",
     answer:
-      "Most agencies go live within 1–2 weeks. This includes WhatsApp setup, knowledge base configuration, listing integration, testing, and your go-live review.",
+      "Most agencies go live within 1-2 weeks. This includes WhatsApp setup, knowledge base configuration, listing integration, testing, and your go-live review.",
   },
   {
-    question: "What platforms does Lysa work on?",
+    question: "What platforms does Lysa support?",
     answer:
-      "Lysa currently operates on WhatsApp, which is where a growing number of real estate inquiries happen in the US. Future channels include Instagram, Facebook Messenger, SMS, and email.",
+      "WhatsApp is the primary channel today. Future channels include Instagram, Facebook Messenger, SMS, and email.",
   },
   {
-    question: "Do I need technical knowledge?",
+    question: "Do we need technical knowledge?",
     answer:
-      "Not at all. We handle the entire setup — WhatsApp configuration, knowledge upload, deployment, and testing. You just need to provide your brokerage information and listings.",
+      "Not at all. We handle the entire setup, including WhatsApp configuration, knowledge upload, deployment, and testing. You just need to provide your brokerage information and listings.",
   },
   {
-    question: "Can Lysa integrate with my CRM?",
+    question: "Does Lysa integrate with our CRM?",
     answer:
-      "CRM integrations (GoHighLevel, HubSpot, etc.) are available as optional add-ons. The base deployment includes lead qualification with structured data you can export manually.",
+      "Optional add-ons include GoHighLevel and HubSpot. The base product includes exportable structured lead data.",
   },
   {
-    question: "What happens after I book a demo?",
+    question: "What happens after we book a demo?",
     answer:
-      "We'll walk you through Lysa live, discuss your brokerage's needs, and provide a tailored deployment plan. There's no obligation — it's a chance to see if Lysa is the right fit.",
+      "We'll walk you through Lysa live, discuss your brokerage's needs, and provide a tailored deployment plan. There's no obligation. It's a chance to see if Lysa is the right fit.",
   },
   {
     question: "Is there a contract or minimum term?",
     answer:
-      "The $79/month Lysa plan is month-to-month with no long-term contract. The $450 deployment fee is a one-time setup cost.",
+      "Lysa is $79/month on a month-to-month basis, plus a one-time $449 deployment fee.",
   },
 ];
 
 export function FAQ() {
   return (
-    <MotionSection id="faq" className="relative py-24 lg:py-32 bg-white/[0.01]">
-      <div className="mx-auto max-w-3xl px-6 lg:px-8">
-        <SectionHeader
-          label="FAQ"
-          title="Common questions"
-          description="Everything you need to know about deploying Lysa in your brokerage."
-        />
+    <section id="faq" className="border-b border-neutral-200 bg-surface">
+      <div className="mx-auto max-w-container px-[6vw] py-16 lg:py-24">
+        <div className="mb-12 text-center">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-rose">
+            FAQ
+          </p>
+          <h2 className="font-display text-[clamp(2rem,5vw,3.375rem)] font-medium leading-tight text-green-850">
+            Common questions
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-body">
+            Everything you need to know about deploying Lysa in your brokerage.
+          </p>
+        </div>
 
-        <Accordion type="single" collapsible className="w-full">
-          {faqs.map((faq, index) => (
-            <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger>{faq.question}</AccordionTrigger>
-              <AccordionContent>{faq.answer}</AccordionContent>
+        <Accordion
+          type="single"
+          collapsible
+          className="mx-auto max-w-3xl rounded-2xl border border-neutral-200 bg-white px-6"
+        >
+          {faqs.map((faq, i) => (
+            <AccordionItem key={faq.question} value={`item-${i}`}>
+              <AccordionTrigger className="text-left text-green-850">
+                {faq.question}
+              </AccordionTrigger>
+              <AccordionContent className="text-body">
+                {faq.answer}
+              </AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
       </div>
-    </MotionSection>
+    </section>
   );
 }

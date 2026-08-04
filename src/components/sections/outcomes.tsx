@@ -48,7 +48,7 @@ const outcomes = [
   {
     icon: Bot,
     title: "AI available 24/7",
-    description: "Never miss a lead — weekends, evenings, and holidays included.",
+    description: "Never miss a lead, including weekends, evenings, and holidays.",
   },
 ];
 
@@ -59,7 +59,7 @@ export function Outcomes() {
         <SectionHeader
           label="Outcomes"
           title="Results that matter to your brokerage"
-          description="Lysa doesn't sell features — it delivers measurable outcomes from day one."
+          description="Lysa doesn't sell features. It delivers measurable outcomes from day one."
         />
 
         <motion.div

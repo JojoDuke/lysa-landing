@@ -82,7 +82,7 @@ Lysa helps agencies:
 
 ---
 
-## Capability 1 — Lead Qualification Agent
+## Capability 1: Lead Qualification Agent
 
 ### Purpose
 
@@ -119,7 +119,7 @@ Determine whether an inquiry is worth pursuing and collect all relevant informat
 
 ---
 
-## Capability 2 — Knowledge Agent
+## Capability 2: Knowledge Agent
 
 ### Purpose
 
@@ -152,7 +152,7 @@ Answer questions using the brokerage's knowledge.
 
 ---
 
-## Capability 3 — Property Discovery Agent
+## Capability 3: Property Discovery Agent
 
 ### Purpose
 
@@ -184,7 +184,7 @@ Help buyers discover relevant properties.
 
 ---
 
-## Capability 4 — Showing Booking Agent
+## Capability 4: Showing Booking Agent
 
 ### Purpose
 
@@ -212,7 +212,7 @@ Convert interested buyers into scheduled showings.
 
 ---
 
-## Capability 5 — Conversation Memory Agent
+## Capability 5: Conversation Memory Agent
 
 ### Purpose
 

@@ -1,26 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 4%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 6%;
-    --card-foreground: 0 0% 98%;
-    --primary: 160 84% 39%;
+    --background: 152 60% 97%;
+    --foreground: 168 61% 16%;
+    --card: 0 0% 100%;
+    --card-foreground: 168 61% 16%;
+    --primary: 152 52% 42%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 10%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 60%;
-    --accent: 160 84% 39%;
+    --secondary: 330 45% 52%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 152 30% 94%;
+    --muted-foreground: 168 20% 32%;
+    --accent: 330 72% 58%;
     --accent-foreground: 0 0% 100%;
-    --border: 0 0% 14%;
-    --ring: 160 84% 39%;
-    --radius: 0.75rem;
+    --border: 152 20% 88%;
+    --ring: 330 72% 58%;
+    --radius: 0.5rem;
+
+    --surface: #f0fdf9;
+    --green-850: #115e59;
+    --green-800: #0f766e;
+    --green-700: #148078;
+    --green-600: #1aab73;
+    --green-400: #3ecf8e;
+    --green-75: #b8e8d4;
+    --text-body: #3d5c54;
+    --rose: #e8488a;
+    --rose-muted: #c45b8a;
   }
 }
 
@@ -34,12 +43,11 @@
   }
 
   body {
-    @apply bg-[#0a0a0a] text-foreground antialiased;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    @apply bg-surface text-body antialiased;
   }
 
   ::selection {
-    @apply bg-emerald-500/30 text-white;
+    @apply bg-rose/20 text-green-850;
   }
 }
 
@@ -47,30 +55,57 @@
   .text-balance {
     text-wrap: balance;
   }
-}
 
-@keyframes accordion-down {
-  from {
-    height: 0;
+  .rucoria-grid {
+    background-image:
+      linear-gradient(to right, #d1e7df 1px, transparent 1px),
+      linear-gradient(to bottom, #d1e7df 1px, transparent 1px);
+    background-size: calc(100% / 12) 100%;
   }
-  to {
-    height: var(--radix-accordion-content-height);
-  }
-}
 
-@keyframes accordion-up {
-  from {
-    height: var(--radix-accordion-content-height);
+  .rucoria-dots {
+    background-image: radial-gradient(circle, #d1e7df 1px, transparent 1px);
+    background-size: 24px 24px;
   }
-  to {
-    height: 0;
+
+  @keyframes text-reveal-up {
+    from {
+      transform: translate3d(0, 100%, 0);
+    }
+    to {
+      transform: translate3d(0, 0, 0);
+    }
   }
-}
 
-.animate-accordion-down {
-  animation: accordion-down 0.2s ease-out;
-}
+  .hero-reveal {
+    display: block;
+    overflow: hidden;
+    padding-bottom: 0.14em;
+  }
 
-.animate-accordion-up {
-  animation: accordion-up 0.2s ease-out;
+  .hero-reveal-inner {
+    display: block;
+    padding-bottom: 0.02em;
+    animation: text-reveal-up 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  .hero-reveal-inner-delay-1 {
+    animation-delay: 0.12s;
+  }
+
+  .hero-reveal-inner-delay-2 {
+    animation-delay: 0.24s;
+  }
+
+  .hero-reveal-inner-delay-3 {
+    animation-delay: 0.45s;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-reveal-inner {
+      animation: none;
+      transform: none;
+    }
+  }
 }

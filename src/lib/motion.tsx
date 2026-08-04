@@ -39,6 +39,18 @@ export const scaleIn: Variants = {
   },
 };
 
+export const textReveal: Variants = {
+  hidden: { y: "110%" },
+  visible: (delay: number = 0) => ({
+    y: 0,
+    transition: {
+      duration: 0.85,
+      delay,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  }),
+};
+
 interface MotionSectionProps {
   children: React.ReactNode;
   className?: string;
