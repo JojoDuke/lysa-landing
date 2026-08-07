@@ -39,6 +39,21 @@ export const metadata: Metadata = {
     type: "website",
     url: "/",
     siteName: "Lysa",
+    images: [
+      {
+        url: "/og.png",
+        width: 1024,
+        height: 474,
+        alt: "Meet Lysa, your AI real estate employee",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lysa | Your AI Real Estate Employee",
+    description:
+      "Qualify leads, recommend properties, and book showings 24/7 on WhatsApp.",
+    images: ["/og.png"],
   },
 };
 
