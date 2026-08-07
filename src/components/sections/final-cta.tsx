@@ -1,6 +1,5 @@
-import Link from "next/link";
 import { ChevronRight } from "lucide-react";
-import { BOOK_DEMO_URL } from "@/lib/constants";
+import { BookDemoLink } from "@/components/analytics/book-demo-link";
 import { Button } from "@/components/ui/button";
 
 export function FinalCTA() {
@@ -19,10 +18,10 @@ export function FinalCTA() {
 
           <div className="mt-10">
             <Button asChild size="lg">
-              <Link href={BOOK_DEMO_URL} target="_blank" rel="noopener noreferrer">
+              <BookDemoLink location="final_cta">
                 Book a demo
                 <ChevronRight className="h-4 w-4" />
-              </Link>
+              </BookDemoLink>
             </Button>
           </div>
 

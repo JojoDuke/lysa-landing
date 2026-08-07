@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
-import { BOOK_DEMO_URL } from "@/lib/constants";
+import { BookDemoLink } from "@/components/analytics/book-demo-link";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/ui/logo";
 
@@ -43,9 +43,7 @@ export function Navbar() {
 
           <div className="hidden lg:block">
             <Button asChild variant="outline" size="sm">
-              <Link href={BOOK_DEMO_URL} target="_blank" rel="noopener noreferrer">
-                Book a demo
-              </Link>
+              <BookDemoLink location="navbar">Book a demo</BookDemoLink>
             </Button>
           </div>
 
@@ -80,14 +78,12 @@ export function Navbar() {
               ))}
               <div className="mt-6 px-4">
                 <Button asChild className="w-full">
-                  <Link
-                    href={BOOK_DEMO_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <BookDemoLink
+                    location="navbar_mobile"
                     onClick={() => setMobileOpen(false)}
                   >
                     Book a demo
-                  </Link>
+                  </BookDemoLink>
                 </Button>
               </div>
             </div>

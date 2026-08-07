@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BOOK_DEMO_URL } from "@/lib/constants";
+import { BookDemoLink } from "@/components/analytics/book-demo-link";
 import { Logo } from "@/components/ui/logo";
 
 const footerLinks = {
@@ -27,7 +27,7 @@ const footerLinks = {
     { href: "/blog", label: "Blog" },
   ],
   Company: [
-    { href: BOOK_DEMO_URL, label: "Book a Demo", external: true },
+    { label: "Book a Demo", demo: true },
     { href: "#platform", label: "About" },
   ],
 };
@@ -49,15 +49,24 @@ export function Footer() {
               <ul className="mt-4 space-y-3">
                 {links.map((link) => (
                   <li key={link.label}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-green-75/80"
-                      {...("external" in link && link.external
-                        ? { target: "_blank", rel: "noopener noreferrer" }
-                        : {})}
-                    >
-                      {link.label}
-                    </Link>
+                    {"demo" in link && link.demo ? (
+                      <BookDemoLink
+                        location="footer"
+                        className="text-sm text-green-75/80"
+                      >
+                        {link.label}
+                      </BookDemoLink>
+                    ) : (
+                      <Link
+                        href={link.href!}
+                        className="text-sm text-green-75/80"
+                        {...("external" in link && link.external
+                          ? { target: "_blank", rel: "noopener noreferrer" }
+                          : {})}
+                      >
+                        {link.label}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>

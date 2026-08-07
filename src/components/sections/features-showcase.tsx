@@ -1,6 +1,5 @@
-import Link from "next/link";
 import { ChevronRight } from "lucide-react";
-import { BOOK_DEMO_URL } from "@/lib/constants";
+import { BookDemoLink } from "@/components/analytics/book-demo-link";
 import { Button } from "@/components/ui/button";
 
 const features = [
@@ -102,10 +101,10 @@ export function FeaturesShowcase() {
               </p>
             </div>
             <Button asChild variant="inverse" className="mt-8 w-fit">
-              <Link href={BOOK_DEMO_URL} target="_blank" rel="noopener noreferrer">
+              <BookDemoLink location="features">
                 Book a demo
                 <ChevronRight className="h-4 w-4" />
-              </Link>
+              </BookDemoLink>
             </Button>
           </article>
         </div>

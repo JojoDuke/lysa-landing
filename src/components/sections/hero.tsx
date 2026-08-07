@@ -1,6 +1,5 @@
-import Link from "next/link";
 import { ChevronRight } from "lucide-react";
-import { BOOK_DEMO_URL } from "@/lib/constants";
+import { BookDemoLink } from "@/components/analytics/book-demo-link";
 import { Button } from "@/components/ui/button";
 
 function RevealLine({
@@ -39,10 +38,10 @@ export function Hero() {
         <div className="hero-reveal mt-10">
           <div className="hero-reveal-inner hero-reveal-inner-delay-3">
             <Button asChild size="lg">
-              <Link href={BOOK_DEMO_URL} target="_blank" rel="noopener noreferrer">
+              <BookDemoLink location="hero">
                 Book a demo
                 <ChevronRight className="h-4 w-4" />
-              </Link>
+              </BookDemoLink>
             </Button>
           </div>
         </div>

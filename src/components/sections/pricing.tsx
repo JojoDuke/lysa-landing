@@ -1,6 +1,5 @@
-import Link from "next/link";
 import { Check } from "lucide-react";
-import { BOOK_DEMO_URL } from "@/lib/constants";
+import { BookDemoLink } from "@/components/analytics/book-demo-link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -71,9 +70,7 @@ export function Pricing() {
                 </ul>
                 <div className="mt-auto pt-8">
                   <Button asChild className="w-full">
-                    <Link href={BOOK_DEMO_URL} target="_blank" rel="noopener noreferrer">
-                      Book a Demo
-                    </Link>
+                    <BookDemoLink location="pricing">Book a Demo</BookDemoLink>
                   </Button>
                 </div>
               </CardContent>

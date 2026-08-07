@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans, Public_Sans } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import { PostHogProvider } from "@/components/providers/posthog-provider";
 import { siteUrl } from "@/lib/site";
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -67,9 +68,11 @@ export default function RootLayout({
       <body
         className={`${plusJakarta.variable} ${publicSans.variable} font-sans`}
       >
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <PostHogProvider>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </PostHogProvider>
       </body>
     </html>
   );
