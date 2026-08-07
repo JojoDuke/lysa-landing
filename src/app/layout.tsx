@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans, Public_Sans } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import { siteUrl } from "@/lib/site";
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -17,6 +18,7 @@ const publicSans = Public_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Lysa | Your AI Real Estate Employee",
   description:
     "The AI employee that qualifies leads, recommends properties, and books showings 24/7 on WhatsApp. Deploy Lysa in your real estate brokerage today.",
@@ -27,11 +29,16 @@ export const metadata: Metadata = {
     "property recommendations",
     "real estate automation",
   ],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Lysa | Your AI Real Estate Employee",
     description:
       "Qualify leads, recommend properties, and book showings 24/7 on WhatsApp.",
     type: "website",
+    url: "/",
+    siteName: "Lysa",
   },
 };
 

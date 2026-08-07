@@ -1,0 +1,45 @@
+# Lysa
+
+> Lysa is an AI real estate employee that works on WhatsApp. It qualifies leads, recommends properties, books showings, and answers brokerage questions 24/7 so agents can focus on closings.
+
+Lysa is a deployable product for real estate brokerages and independent agents, not a DIY chatbot builder. Primary channel today is WhatsApp; it can also be extended to Instagram, Facebook Messenger, SMS, and email on request.
+
+## Site
+
+- Home: https://textlysa.com
+- Blog: https://textlysa.com/blog
+- Book a demo: https://calendly.com/jojoamankwa/j
+- Product app: https://app.textlysa.com
+
+## Product capabilities
+
+- Lead Qualification Tools: detect buyer or seller intent and hand structured Hot/Warm/Cold leads to the team
+- Property Discovery: match buyer requirements to listings with recommendations in real time
+- Showing Booking: offer slots, confirm appointments, and notify agents
+- Knowledge Agent: answer brokerage FAQs and property questions from your documents
+- Property Valuation Agent: comps and market data for faster valuations
+- Document Processing Agent: extract key terms from agreements and disclosures
+- Market Analysis Agent: price trends, days on market, inventory, neighborhood comparisons
+- Tenant Communication Agent: maintenance, lease questions, payment reminders
+- Maintenance Prediction Agent: predict service needs before breakdowns
+
+## Pricing
+
+- Deployment: $449 one-time (setup, WhatsApp integration, knowledge upload, testing, go-live)
+- Lysa: $79/month (hosted infrastructure, AI usage, maintenance, monitoring, updates, priority support)
+- Typical deployment time: about 7 days
+- Billing: month-to-month after deployment
+
+## Audience
+
+- Real estate brokerages
+- Independent agents
+
+## Optional integrations
+
+- CRM add-ons: GoHighLevel, HubSpot
+- Base product includes exportable structured lead data
+
+## Contact
+
+Book a demo: https://calendly.com/jojoamankwa/j
