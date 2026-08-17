@@ -31,7 +31,7 @@ export function Hero() {
         <span className="hero-reveal mx-auto mt-8 block max-w-2xl">
           <span className="hero-reveal-inner hero-reveal-inner-delay-2 text-lg leading-relaxed text-body sm:text-xl">
             Qualifies leads, recommends properties, and books showings for your
-            brokerage 24/7 on WhatsApp.
+            brokerage 24/7. All through messages.
           </span>
         </span>
 
