@@ -5,18 +5,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const plans = [
   {
-    name: "Deployment",
-    price: "$449",
-    period: "one-time",
-    features: [
-      "Configuration & setup",
-      "WhatsApp integration",
-      "Knowledge base upload",
-      "Full deployment",
-      "Testing & go-live",
-    ],
-  },
-  {
     name: "Lysa",
     price: "$79",
     period: "/month",
@@ -40,12 +28,11 @@ export function Pricing() {
             Simple, transparent pricing
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-body">
-            One deployment fee to get started. One monthly fee to keep Lysa
-            running.
+            One monthly fee to keep Lysa running.
           </p>
         </div>
 
-        <div className="mx-auto grid max-w-4xl items-stretch gap-6 md:grid-cols-2">
+        <div className="mx-auto grid max-w-md items-stretch gap-6">
           {plans.map((plan) => (
             <Card key={plan.name} className="flex h-full flex-col">
               <CardHeader>
